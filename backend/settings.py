@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'www.mycalldevcp.com', 'www.mycalldevcp.co.uk', '68.183.34.192']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'www.mycalldevcp.co.uk', '68.183.34.192']
 
 
 # Application definition
