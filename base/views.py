@@ -12,12 +12,12 @@ from django.conf import settings
 
 @api_view(['GET'])
 def getBlogs(request):
-    blogs = blog.objects.filter(goLive='yes')
+    blogs = Blog.objects.filter(goLive='yes')
     serializer = BlogSerializer(blogs, many=True)
     return response(serializer.data)
 
 def getBlog(request):
-    blog = blog.object.get(_id=pk)
+    blog = Blog.object.get(_id=pk)
     serializer = BlogSerializer(blog, many=False)
     return response(serializer.data)
 
