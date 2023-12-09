@@ -14,10 +14,10 @@ from django.conf import settings
 def getBlogs(request):
     blogs = Blog.objects.filter(goLive='yes')
     serializer = BlogSerializer(blogs, many=True)
-    return response(serializer.data)
+    return Response(serializer.data)
 
 def getBlog(request):
     blog = Blog.object.get(_id=pk)
     serializer = BlogSerializer(blog, many=False)
-    return response(serializer.data)
+    return Response(serializer.data)
 
