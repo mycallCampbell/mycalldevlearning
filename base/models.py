@@ -13,6 +13,8 @@ class Blog(models.Model):
     imageRef3 = models.CharField(max_length=200, null=True, blank=True)
     minuteRead = models.IntegerField(null=True, blank=True, default=0)
     blogTitle = models.CharField(max_length=200, null=True, blank=True)
+    tagTeaser = models.CharField(max_length=200, null=True, blank=True)
+    tagCompletion = models.CharField(max_length=200, null=True, blank=True)
     subTitle1 = models.CharField(max_length=200, null=True, blank=True)
     subTitle2 = models.CharField(max_length=200, null=True, blank=True)
     subTitle3 = models.CharField(max_length=200, null=True, blank=True)
