@@ -16,6 +16,7 @@ def getBlogs(request):
     serializer = BlogSerializer(blogs, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
 def getBlog(request):
     blog = Blog.objects.get(_id=pk)
     serializer = BlogSerializer(blog, many=False)
