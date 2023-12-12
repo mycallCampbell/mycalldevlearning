@@ -7,7 +7,8 @@ from django.db.models.fields import AutoField
 class Blog(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     goLive = models.CharField(max_length=200, null=True, blank=True)
-    imageTitle = models.CharField(max_length=200, null=True, blank=True)
+    blogTitle = models.CharField(max_length=200, null=True, blank=True)
+    imageThumbnail = models.CharField(max_length=200, null=True, blank=True)
     imageHeroMobile = models.CharField(max_length=200, null=True, blank=True)
     imageHeroDesktop = models.CharField(max_length=200, null=True, blank=True)
     imageWidthMobile = models.IntegerField(null=True, blank=True, default=0)
@@ -18,7 +19,6 @@ class Blog(models.Model):
     imageRef2 = models.CharField(max_length=200, null=True, blank=True)
     imageRef3 = models.CharField(max_length=200, null=True, blank=True)
     minuteRead = models.IntegerField(null=True, blank=True, default=0)
-    blogTitle = models.CharField(max_length=200, null=True, blank=True)
     tagTeaser = models.CharField(max_length=200, null=True, blank=True)
     tagCompletion = models.CharField(max_length=200, null=True, blank=True)
     subTitle1 = models.CharField(max_length=200, null=True, blank=True)
