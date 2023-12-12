@@ -8,6 +8,8 @@ class Blog(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     goLive = models.CharField(max_length=200, null=True, blank=True)
     imageTitle = models.CharField(max_length=200, null=True, blank=True)
+    imageHeroMobile = models.CharField(max_length=200, null=True, blank=True)
+    imageHeroDesktop = models.CharField(max_length=200, null=True, blank=True)
     imageRef1 = models.CharField(max_length=200, null=True, blank=True)
     imageRef2 = models.CharField(max_length=200, null=True, blank=True)
     imageRef3 = models.CharField(max_length=200, null=True, blank=True)
