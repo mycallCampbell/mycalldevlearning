@@ -7,7 +7,8 @@ from django.db.models.fields import AutoField
 class Blog(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     goLive = models.CharField(max_length=200, null=True, blank=True)
-    blogTitle = models.CharField(max_length=200, null=True, blank=True)
+    blogTitleFrontend = models.CharField(max_length=200, null=True, blank=True)
+    blogTitleBackend = models.CharField(max_length=200, null=True, blank=True)
     imageThumbnail = models.CharField(max_length=200, null=True, blank=True)
     imageHeroMobile = models.CharField(max_length=200, null=True, blank=True)
     imageHeroDesktop = models.CharField(max_length=200, null=True, blank=True)
@@ -56,7 +57,7 @@ class Blog(models.Model):
     _id = AutoField(primary_key=True, editable=False)
 
     def __str__(self):
-        return self.blogTitle
+        return self.blogTitleFrontend
 
 
 class Podcast(models.Model):
