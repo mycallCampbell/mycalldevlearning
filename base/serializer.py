@@ -1,13 +1,8 @@
 from rest_framework import serializers
-from .models import Blog, Guide
+from .models import Content
 
-class BlogSerializer(serializers.ModelSerializer):
+class ContentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Blog
-        fields = "__all__"
-
-class GuideSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Guide
+        model = Content
         fields = "__all__"
 
