@@ -11,6 +11,7 @@ class Content(models.Model):
     contentTitleBackend = models.CharField(max_length=200, null=True, blank=True)
     imageThumbnail = models.CharField(max_length=200, null=True, blank=True)
     contentTag = models.CharField(max_length=200, null=True, blank=True)
+    published = models.CharField(max_length=200, null=True, blank=True)
     minuteRead = models.IntegerField(null=True, blank=True, default=0)
     createAt = models.DateTimeField(auto_now_add=True)
     _id = AutoField(primary_key=True, editable=False)
